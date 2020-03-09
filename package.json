@@ -1,0 +1,15 @@
+{
+  "name": "iss-location-map-server",
+  "version": "1.0.0",
+  "description": "ISS location map",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sven Hübner",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
+  }
+}

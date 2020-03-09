@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <script src="main.js"></script>
+    <title>ISS Location Map</title>
+    <style>
+      #issMap {
+        width: 1100px;
+        height: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Wo befindet sich die ISS - International Space Station?</h1>
+      <p style="width: 50%">
+        Die Internationale Raumstation ist die derzeit einzige ständig bemannte
+        Raumstation und das größte außerirdische Bauwerk der
+        Menschheitsgeschichte. Sie wird in internationaler Kooperation von 16
+        Staaten bzw. 5 Raumfahrtagenturen betrieben und ausgebaut.
+      </p>
+    </div>
+    <div style="display:flex">
+      <div id="issMap" style="margin-right: 16px;"></div>
+      <div style="flex-grow: 1">
+        <h2>ISS Daten</h2>
+        <table width="100%">
+          <tr>
+            <td width="50%">Spannweite</td>
+            <td width="50%">109 m</td>
+          </tr>
+          <tr>
+            <td width="50%">Masse</td>
+            <td width="50%">420 t</td>
+          </tr>
+          <tr>
+            <td width="50%">Bahnneigung</td>
+            <td width="50%">51,6°</td>
+          </tr>
+          <tr>
+            <td width="50%">Höhe (aktuell)</td>
+            <td id="altitude" width="50%">...fetch data</td>
+          </tr>
+          <tr>
+            <td>Geschwindigkeit (aktuell)</td>
+            <td id="velocity">...fetch data</td>
+          </tr>
+          <tr>
+            <td>Umlaufzeit</td>
+            <td>93 min</td>
+          </tr>
+        </table>
+
+        <br />
+        <h2>ISS Location</h2>
+        <table width="100%">
+          <tr>
+            <td width="50%">Breitengrad</td>
+            <td width="50%" id="lat">...fetch data</td>
+          </tr>
+          <tr>
+            <td>Längengrad</td>
+            <td id="long">...fetch data</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
