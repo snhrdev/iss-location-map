@@ -28,9 +28,6 @@ function initMap() {
 
   // add a scale bar on the lower left corner
   L.control.scale().addTo(issMap);
-  
-  // draw route to follow up the way of the iss
-  drawRoute();
 }
 
 // fetch location of the iss
@@ -46,6 +43,9 @@ async function fetchISS() {
   document.querySelector('#altitude').textContent = altitude.toFixed(0) + ' km';
   document.querySelector('#lat').textContent = latitude.toFixed(2) + '°';
   document.querySelector('#long').textContent = longitude.toFixed(2) + '°';
+
+  // draw route to follow up the way of the iss
+  drawRoute();
 
   return {
     lon: longitude,
